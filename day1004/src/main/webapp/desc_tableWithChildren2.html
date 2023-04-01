@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/* table > tr > th 라고 하면 안됨. 당연히 th는 tr의 자식이고 tr은 table의 자식이니까. table에 id 지정해서 구분가능함 */
+	#lee th{
+		color:red;
+	}
+</style>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<th>이름</th>
+			<th>지역</th>
+		</tr>
+		<tr>
+			<td>윤인성</td>
+			<td>서울특별시 강서구 내발산동</td>
+		</tr>
+	</table>
+	
+		<table border="1" id="lee">
+		<tr>
+			<th>이름</th>
+			<th>지역</th>
+		</tr>
+		<tr>
+			<td>이순신</td>
+			<td>서울특별시 마포구 서교동</td>
+		</tr>
+	</table>
+</body>
+</html>

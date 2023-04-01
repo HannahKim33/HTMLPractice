@@ -1,0 +1,52 @@
+tomcat download 검색
+https://tomcat.apache.org/download-90.cgi
+
+왼쪽 다운로드->tomcat 9
+->Core:->마지막꺼 (32-bit/64-bit Windows Service Installer )
+
+포트번호 8089
+경로 C:\tomcat어쩌구
+
+설치후 아래 바에서
+general=>stop 
+
+file->new ->other->server->server->
+Apache->Tomcat v9.0
+server's host name : ip주소 or localhost
+
+프로젝트 생성
+new->dynamic web project->day0929->finish
+
+아래 servers 창->tomcat 어쩌구 더블클릭->ports-> Tomcat admin port 8005
+
+
+
+
+
+
+정적인 html: 항상 똑같음
+동적인 html: 사용자 요청에 따라 화면 달라짐. <-자바스크립트
+자바스크립트는 외부에 코드 노출되기 때문에 jsp로 코드 감춤. 그러면 생성된 html만 노출됨.
+
+웹 초기에 자바스크립트는 유효성 검사할 때만 쓰고 중요하지 않았음
+
+자스 기반으로 node js 만들어짐
+node js는 웹브라우저가 아닌 곳에서도 동작함
+현재는 자스가 중요하게 여겨짐
+자스만으로 서버 만들 수 있음
+
+우리나라는 공공기관 스프링 채택. 우리나라 현장에는 자바, 스프링 기반 프로젝트 많음
+
+공공기관 아니면 스프링,자바 쓸 일 없음
+노드와 자바스크립트만으로 개발 충분히 가능
+
+http://localhost:8089/day0929/hello.html
+
+
+<<UTF-8로 바꾸기>>
+
+window-preference-web-html files-encoding-iso utf-8 (jsp도)
+
+server-tomcat 어쩌구-server.xml-source 탭-
+    <Connector connectionTimeout="20000" port="8089" protocol="HTTP/1.1" redirectPort="8443"
+    URIEncoding="utf-8" <--요거 추가
